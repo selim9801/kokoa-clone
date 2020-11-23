@@ -9,7 +9,7 @@
 .user-component_avatar{
     width:70px;
     height: 70px;
-    border-radius:30px;
+    border-radius:30%;
     margin-right: 20px;
 }
 .user-component_title{
@@ -27,13 +27,15 @@
 }
 
 .user-component_avatar--sm{
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius:25px;
+    margin-left:10px;
 
 }
 .user-component_title--not-bold{
     font-weight:100;
+    font-size:16px;
 }
 
 .user-component_column:last-child{
@@ -45,4 +47,10 @@
 .user-component_time{
     margin-bottom:10px;
     display:block;
+}
+
+.chat-two{
+    margin-top:20px;
+    border-top:var(--main-border);
+    padding-top:10px;
 }

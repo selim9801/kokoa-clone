@@ -20,7 +20,7 @@
 }
 /* ************************main***************************** */
 .main-chat{
-    margin-top:180px;
+    margin-top:120px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,7 +31,7 @@
     color: white;
     background-color: #92a4b2;
     padding:15px;
-    font-size: 14px;;
+    font-size: 13px;;
     border-radius: 25px;
     margin-bottom:25px;
 }
@@ -40,6 +40,32 @@
     width: 100%;
     display:flex;
     margin-bottom:25px;
+}
+.message-row--left{
+    animation:messageLeft 1s ease-in-out ;
+}
+@keyframes messageLeft{
+    from{
+        transform: translateX(-180px);
+        
+    }
+    to{
+        transform: none;
+    }
+}
+.message-row--own{
+    animation: messageRight 1s ease-in-out forwards;
+    animation-delay: 0.8s;
+    transform: translateX(250px);
+}
+@keyframes messageRight{
+    from{
+        
+        
+    }
+    to{
+        transform: none;
+    }
 }
 .message-row img{
     width:50px;
@@ -95,7 +121,7 @@
     background-color: white;
     display: flex;
     justify-content:space-between;
-    padding:5px 25px;
+    padding:5px 25px 5px 15px;
     align-items: center;
     box-sizing: border-box;
     transition:all 0.3s ease-in-out;
@@ -109,23 +135,24 @@
     position: relative;
 }
 .reply input{
-    height: 30px;
+    
     width: 100%;
     border: var(--main-border);
     border-radius:20px;
-    padding:5px 0px 5px 10px;
+    padding:14px;
     transition: transform 0.3s ease-in-out;
+    box-sizing: border-box;
 }
 
 .reply .reply_column:last-child>i,
 .reply .reply_column:last-child button{
     position: absolute;
-    right:-8px;
-    top:5px;
+    right:3px;
+    top:7px;
 }
 .reply .reply_column:last-child>i{
-    right:28px;
-    top:13px;
+    right:40px;
+    top:15px;
 }
 .reply i{
     opacity:0.5;
@@ -156,8 +183,8 @@
     opacity:0;
 }
 .reply input:focus{
-    width: 94vw;
-    transform:translateX(-11%) translateY(-80px);
+    width: 93vw;
+    transform:translateX(-10%) translateY(-80px);
 
 }
 .reply .reply_column:first-child,
