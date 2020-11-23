@@ -1,3 +1,3 @@
 # kokoa clone 2020 update
 
-css got so much better!
+HTML & CSS gpt are so much fun
