@@ -1,0 +1,171 @@
+#chat-screen{
+    background-color: #abc1d1;
+    height: 100vh;
+}
+#chat-screen #status-bar,
+#chat-screen .alt-header{
+    position:fixed;
+    width: 100%;
+    box-sizing: border-box;
+    top:0;
+    background-color: #abc1d1;
+}
+#chat-screen #status-bar{
+    z-index: 2;
+}
+
+#chat-screen .alt-header{
+    top:10px;
+    z-index: 1;
+}
+/* ************************main***************************** */
+.main-chat{
+    margin-top:180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.chat_timestamp{
+    color: white;
+    background-color: #92a4b2;
+    padding:15px;
+    font-size: 14px;;
+    border-radius: 25px;
+    margin-bottom:25px;
+}
+/* ********************message-row**************************** */
+.message-row{
+    width: 100%;
+    display:flex;
+    margin-bottom:25px;
+}
+.message-row img{
+    width:50px;
+    height: 50px;
+    border-radius:50% ;
+    margin-right:10px;
+}
+.message_author{
+    display:block;
+    opacity:0.8;
+    font-size:16px;
+    margin-bottom:7px;
+}
+.message_info{
+    display: flex;
+    align-items: flex-end;
+}
+.message_bubble{
+    background-color:white;
+    padding:13px;
+    border-radius: 15px;
+    border-top-left-radius:0px;
+    margin-right:5px;
+    font-size: 18px;
+}
+.message_time{
+    font-size: 13px;
+    opacity:0.8;
+}
+.message-row--own{
+    justify-content:flex-end;   
+}
+
+.message-row--own .message_bubble{
+    background-color: var(--yellow);
+    border-top-right-radius:0px;
+    border-top-left-radius:15px;
+    margin-left:5px;
+    margin-right:0px;
+    /* order:0; */
+}
+/* .message-row--own .message_bubble{
+    order:1;
+} */
+.message-row--own .message_info{
+    flex-direction: row-reverse;
+}
+/* ************************form*************************** */
+.reply{
+    position: fixed;
+    bottom:0;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content:space-between;
+    padding:5px 25px;
+    align-items: center;
+    box-sizing: border-box;
+    transition:all 0.3s ease-in-out;
+}
+.reply .reply_column:first-child{
+    width: 10%;
+}
+.reply .reply_column:last-child{
+    width: 90%;
+    
+    position: relative;
+}
+.reply input{
+    height: 30px;
+    width: 100%;
+    border: var(--main-border);
+    border-radius:20px;
+    padding:5px 0px 5px 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.reply .reply_column:last-child>i,
+.reply .reply_column:last-child button{
+    position: absolute;
+    right:-8px;
+    top:5px;
+}
+.reply .reply_column:last-child>i{
+    right:28px;
+    top:13px;
+}
+.reply i{
+    opacity:0.5;
+}
+.reply button i{
+    opacity: 1;
+}
+/* .reply i:not(button>i){
+    opacity:0.5;
+} */
+.reply_column button{
+    background-color:var(--yellow);
+    border:none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.reply_column button:focus,
+.reply_column button:active{
+    outline:none;
+}
+
+
+/*focus-within은 reply 내부에 어떤 element가 focus되어 있다면 이라는 뜻  */ 
+.reply:focus-within .reply_column:first-child,
+.reply:focus-within .fa-smile-wink,
+.reply:focus-within button{
+    opacity:0;
+}
+.reply input:focus{
+    width: 94vw;
+    transform:translateX(-11%) translateY(-80px);
+
+}
+.reply .reply_column:first-child,
+.reply .fa-smile-wink,
+.reply button{
+    transition: opacity 0.3s ease-in-out;
+}
+
+.reply:focus-within{
+    transform:translateY(80px);
+}
