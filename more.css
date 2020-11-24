@@ -35,10 +35,28 @@
 .more-suggestions_icon-image i{
     color:white;
     font-size:25px;
+   
 }
 
 .more-suggestions_icons img{
     width: 60px;
     height: 60px;
     border-radius: 10px;
+    margin-bottom:13px;
+}
+.more-story img{
+    animation: story 1.5s ease-in-out infinite;
+}
+.more-story:nth-child(2) img{
+    animation-delay: 0.2s;
+}
+@keyframes story{
+   from{
+       transform:rotateY(360deg);
+       
+   }
+   to{
+       transform:none;
+       
+   }
 }

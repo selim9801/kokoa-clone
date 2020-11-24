@@ -19,7 +19,7 @@
     /* padding-bottom:30px; */
 }
 .friends-screen_channel-header{
-    margin-bottom:30px;
+    margin-bottom:10px;
     display:flex;
     justify-content: space-between;
     color:rgba(0,0,0,0.5);
@@ -52,4 +52,46 @@
         visibility: hidden;
         /* 마우스에 걸리지 않게 빠져버림 */
     }
+}
+
+.friend{
+    margin-top:20px;
+    
+    padding-top:10px;
+   
+}
+.friend img{
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+}
+.user-component_title--friend{
+    font-size: 22px;
+    font-weight:100;
+    
+}
+.friend_content{
+    display:block;
+    background-color:rgba(0,0,0,0.1);
+    padding:10px 20px;
+    border-radius: 30px;
+}
+
+.friend-img img:hover{
+    animation: profile 2s ease-in-out infinite;
+    box-shadow:3px 3px 10px rgba(0,0,0,0.3);
+    
+   
+}
+@keyframes profile{
+   from{
+       
+       
+       transform: scale(1.2,1.2) rotate(360deg) ;
+       
+   }
+   to{
+     
+    
+   }
 }
