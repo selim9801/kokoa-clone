@@ -19,7 +19,7 @@
 .status-bar_column:last-child{
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+   
 }
 
 .status-bar_column .fa-battery-full{
